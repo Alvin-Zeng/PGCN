@@ -7,7 +7,7 @@ This repo holds the codes and models for the PGCN framework presented on ICCV 20
 **Graph Convolutional Networks for Temporal Action Localization**
 Runhao Zeng*, Wenbing Huang*, Mingkui Tan, Yu Rong, Peilin Zhao, Junzhou Huang, Chuang Gan,  *ICCV 2019*, Seoul, Korea.
 
-[[Arxiv Preprint]](http://arxiv.org/abs/xxxxxx)
+[[Arxiv Preprint]](https://arxiv.org/abs/1909.03252)
 
 
 # Contents
