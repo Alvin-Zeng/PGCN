@@ -124,7 +124,9 @@ sh test_two_stream.sh
 | mAP@0.5IoU (%)                    | RGB   | Flow  | RGB+Flow      |
 |-----------------------------------|-------|-------|---------------|
 | P-GCN (I3D)                       | 37.23 | 47.42 | 49.07 (49.64) |
-where 49.64% is obtained by setting the combination weights to Flow:RGB=1.2:1 and nms threshold to 0.32
+
+
+#####Here, 49.64% is obtained by setting the combination weights to Flow:RGB=1.2:1 and nms threshold to 0.32
 
 
 
