@@ -7,7 +7,14 @@ This repo holds the codes and models for the PGCN framework presented on ICCV 20
 **Graph Convolutional Networks for Temporal Action Localization**
 Runhao Zeng*, Wenbing Huang*, Mingkui Tan, Yu Rong, Peilin Zhao, Junzhou Huang, Chuang Gan,  *ICCV 2019*, Seoul, Korea.
 
-[[Arxiv Preprint]](https://arxiv.org/abs/1909.03252)
+[[Paper]](http://openaccess.thecvf.com/content_ICCV_2019/papers/Zeng_Graph_Convolutional_Networks_for_Temporal_Action_Localization_ICCV_2019_paper.pdf)
+
+
+## Updates
+
+
+20/12/2019 We have uploaded the RGB features, trained models and evaluation results! We found that increasing the number of proposals to 800 in the testing
+further boosts the performance on THUMOS14. We have also updated the proposal list.
 
 
 # Contents
@@ -68,7 +75,7 @@ You can use the [official ActivityNet downloader][anet_down] to download videos 
 
 ### Download Features
 
-Here, we provide the I3D Flow feature for training and testing. You can download it from [Google Cloud][features_google] or [Baidu Cloud][features_baidu].
+Here, we provide the I3D features (RGB+Flow) for training and testing. You can download it from [Google Cloud][features_google] or [Baidu Cloud][features_baidu].
 
 
 ## Training PGCN
@@ -104,6 +111,21 @@ sh test.sh TRAINING_CHECKPOINT
 
 Here, `TRAINING_CHECKPOINT` denotes for the trained model.
 This script will report the detection performance in terms of [mean average precision][map] at different IoU thresholds.
+
+The trained models and evaluation results are put in the "results" folder.
+
+You can obtain the two-stream results on THUMOS14 by running
+```bash
+sh test_two_stream.sh
+```
+
+### THUMOS14
+
+| mAP@0.5IoU (%)                    | RGB   | Flow  | RGB+Flow      |
+|-----------------------------------|-------|-------|---------------|
+| P-GCN (I3D)                       | 37.23 | 47.42 | 49.07 (49.64) |
+where 49.64% is obtained by setting the combination weights to Flow:RGB=1.2:1 and nms threshold to 0.32
+
 
 
 # Other Info
