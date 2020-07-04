@@ -7,7 +7,7 @@ import time
 
 def I3D_Pooling(prop_indices, vid, ft_path, n_frame, n_seg=1):
 
-    ft_tensor = torch.load(os.path.join(ft_path, vid))
+    ft_tensor = torch.load(os.path.join(ft_path, vid)).float()
     fts_all_act = []
     fts_all_comp = []
 

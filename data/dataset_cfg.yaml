@@ -1,8 +1,8 @@
 thumos14:
   dataset_configs:
 
-    train_ft_path: /home/datasets/THUMOS14/I3D_video_level/Flow_Val_All
-    test_ft_path: /home/datasets/THUMOS14/I3D_video_level/Flow_Test_All
+    train_ft_path: /home/datasets/THUMOS14/I3D_video_level/Rgb_Train_All
+    test_ft_path: /home/datasets/THUMOS14/I3D_video_level/Rgb_Test_All
 
     train_dict_path: data/thumos14_train_prop_dict.pkl
     val_dict_path: data/thumos14_val_prop_dict.pkl
@@ -46,4 +46,53 @@ thumos14:
     top_k: 2000
     nms_threshold: 0.2
 
+
+
+activitynet1.3:
+  dataset_configs:
+
+    train_ft_path: /home/datasets/
+    test_ft_path: /home/datasets/
+
+    train_dict_path: data/
+    val_dict_path: data/
+    test_dict_path: data/
+    train_prop_file: data/
+    test_prop_file: data/
+
+    training_epoch_multiplier: 5
+    testing_epoch_multiplier: 1
+
+    fg_iou_thresh: 0.7
+    bg_iou_thresh: 0.1
+    incomplete_iou_thresh: 0.6
+    bg_coverage_thresh: 0
+    incomplete_overlap_thresh: 0
+    prop_per_video: 8
+    fg_ratio: 1
+    bg_ratio: 1
+    incomplete_ratio: 6
+    iou_threshold: 0.7
+    dis_threshold: 0
+    starting_ratio: 0.5
+    ending_ratio: 0.5
+
+
+  graph_configs:
+    adj_num: 21
+    child_num: 4
+    iou_num: 8
+    dis_num: 2
+
+  model_configs:
+    num_class: 200
+    act_feat_dim: 1024
+    comp_feat_dim: 3072
+    dropout: 0.8
+    gcn_dropout: 0.7
+
+
+  evaluation:
+    top_k: 100
+    nms_threshold: 0.4
 
