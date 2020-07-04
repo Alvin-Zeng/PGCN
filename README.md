@@ -16,7 +16,7 @@ Runhao Zeng*, Wenbing Huang*, Mingkui Tan, Yu Rong, Peilin Zhao, Junzhou Huang, 
 20/12/2019 We have uploaded the RGB features, trained models and evaluation results! We found that increasing the number of proposals to 800 in the testing
 further boosts the performance on THUMOS14. We have also updated the proposal list.
 
-04/07/2020 We have uploaded the I3D features on Anet along with the training configurations files in data/dataset_cfg.yaml.
+04/07/2020 We have uploaded the I3D features on Anet, the training configurations files in data/dataset_cfg.yaml and the proposal lists for Anet.
 
 
 # Contents
@@ -78,10 +78,15 @@ You can use the [official ActivityNet downloader][anet_down] to download videos 
 ### Download Features
 
 Here, we provide the I3D features (RGB+Flow) for training and testing. 
+
 THUMOS14: You can download it from [Google Cloud][features_google] or [Baidu Cloud][features_baidu].
+
 Anet: You can download the I3D Flow features from [Baidu Cloud][features_baidu_anet_flow] (password: jbsa) 
 and the I3D RGB features from [Google Cloud][features_google_anet_rgb] (Note: set the interval to 16 in ops/I3D_Pooling_Anet.py when training with RGB features)
 
+### Download Proposal Lists (ActivityNet)
+
+Here, we provide the proposal lists for ActivityNet 1.3. You can download them from [Google Cloud][anet_proposal_google]
 
 ## Training PGCN
 [[back to top](#graph-convolutional-networks-for-temporal-action-localization)]
@@ -191,3 +196,4 @@ Runhao Zeng: runhaozeng.cs@gmail.com
 [features_baidu]: https://pan.baidu.com/s/1Dqbcm5PKbK-8n0ZT9KzxGA
 [features_baidu_anet_flow]: https://pan.baidu.com/s/1irWHfdF8RJCQcy1D10GlfA 
 [features_google_anet_rgb]: https://drive.google.com/drive/folders/1UHT3S--vo8MCT8AX3ajHE6TcAThDxFlF?usp=sharing 
+[anet_proposal_google]: https://drive.google.com/drive/folders/1liQHshEzTo2eZsPPIyE0VVfcGOhFSTP6?usp=sharing
